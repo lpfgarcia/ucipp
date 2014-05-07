@@ -9,9 +9,11 @@ require(foreign);
 
 preprocessing = function(file) {
 
-	print(file);
+	# read the file
 	data = read.arff(file);
+	print(file);
 
+	# remove constant attributes
 	for(i in colnames(data)) {	
 
 		if(is.factor(data[,i])) {
@@ -26,15 +28,22 @@ preprocessing = function(file) {
 
 	}
 
+	# remove duplicated examples
+	aux = which(duplicated(data));
+	data = data[-aux,];
+
+	# format the header
 	colnames(data) = c(paste("V", rep(1:(ncol(data)-1)), sep=""), "Class");
 	data$Class = factor(data$Class);
 	rownames(data) = NULL;
 
+	# save the arff file
 	write.arff(data, file);
 }
 
-
-files = list.files("../uci/", full.names=TRUE);
+# execute the script
+setwd("~/ucipp/uci/");
+files = list.files();
 for(file in files)
 	preprocessing(file);
 
