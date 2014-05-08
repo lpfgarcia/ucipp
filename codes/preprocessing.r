@@ -16,16 +16,20 @@ preprocessing = function(file) {
 	# remove constant attributes
 	for(i in colnames(data)) {	
 
+		# categorical attributes
 		if(is.factor(data[,i])) {
 			if(nlevels(data[,i]) == 1) {
 				data[,i] = NULL;
 			}
+		# numeric attributes	
 		} else {
 			if(sd(data[,i]) == 0) {
 				data[,i] = NULL;
+			# z-score	
+			} else {
+				data[,i] = (data[,i] - mean(data[,i]))/sd(data[,i]);
 			}
 		}
-
 	}
 
 	# remove duplicated examples
