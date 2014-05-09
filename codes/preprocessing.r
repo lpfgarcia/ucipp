@@ -34,7 +34,8 @@ preprocessing = function(file) {
 
 	# remove duplicated examples
 	aux = which(duplicated(data));
-	data = data[-aux,];
+	if(length(aux) != 0)
+		data = data[-aux,];
 
 	# format the header
 	colnames(data) = c(paste("V", rep(1:(ncol(data)-1)), sep=""), "Class");
