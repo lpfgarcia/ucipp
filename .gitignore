@@ -1,2 +1,2 @@
 uci/*.processed.arff
-uci/*.sqlite
+uci/*.db
