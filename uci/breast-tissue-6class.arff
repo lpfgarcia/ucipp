@@ -1,4 +1,31 @@
-@relation data
+%%  Source:
+%%  
+%%  JP Marques de Sá, INEB-Instituto de Engenharia Biomédica, Porto, Portugal; e-mail: jpmdesa '@' gmail.com 
+%%  J Jossinet, inserm, Lyon, France
+%%
+%%  
+%%  Data Set Information:
+%%  
+%%  Impedance measurements were made at the frequencies: 15.625, 31.25, 62.5, 125, 250, 500, 1000 KHz 
+%%  Impedance measurements of freshly excised breast tissue were made at the follwoing frequencies: 15.625, 31.25, 62.5, 125, 250, 500, 1000 KHz. These measurements plotted in the (real, -imaginary) plane constitute the impedance spectrum from where the breast tissue features are computed. 
+%%  The dataset can be used for predicting the classification of either the original 6 classes or of 4 classes by merging together the fibro-adenoma, mastopathy and glandular classes whose discrimination is not important (they cannot be accurately discriminated anyway).
+%%
+%%  
+%%  Attribute Information:
+%%  
+%%  I0	Impedivity (ohm) at zero frequency 
+%%  PA500	phase angle at 500 KHz 
+%%  HFS	high-frequency slope of phase angle 
+%%  DA	impedance distance between spectral ends 
+%%  AREA	area under spectrum 
+%%  A/DA	area normalized by DA 
+%%  MAX IP	maximum of the spectrum 
+%%  DR	distance between I0 and real part of the maximum frequency point 
+%%  P	length of the spectral curve 
+%%  Class car(carcinoma), fad (fibro-adenoma), mas (mastopathy), gla (glandular), con (connective), adi (adipose). 
+
+@relation breast-tissue-6class
+
 @attribute V1 numeric
 @attribute V2 numeric
 @attribute V3 numeric
@@ -9,6 +36,7 @@
 @attribute V8 numeric
 @attribute V9 numeric
 @attribute Class {'1','2','3','4','5','6'}
+
 @data
 87,92,89,32,97,59,91,32,5,'2'
 61,4,85,77,56,47,99,84,86,'2'

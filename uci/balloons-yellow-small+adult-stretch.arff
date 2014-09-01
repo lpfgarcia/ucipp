@@ -1,23 +1,56 @@
-@relation data
-@attribute V1 {'1','2'}
-@attribute V2 {'1','2'}
-@attribute V3 {'1','2'}
-@attribute V4 {'1','2'}
-@attribute Class {'1','2'}
+%%1. Title: Balloon databases
+%%
+%%2. Source: Michael Pazzani (pazzani@ics.uci.edu)
+%%
+%%3. Past usage
+%%   Pazzani, M. (1991). The influence of prior knowledge on concept acquisition: 
+%%   Experimental and computational results. Journal of Experimental Psychology: 
+%%   Learning, Memory & Cognition, 17, 3,  416-432.
+%%
+%%4. Relevant information:
+%%   There are four data sets representing different conditions of an experiment.
+%%   All have the same attributes.
+%%   a. adult-stretch.data  Inflated is true if age=adult or act=stretch
+%%   b. adult+stretch.data  Inflated is true if age=adult and act=stretch
+%%   c. small-yellow.data   Inflated is true if (color=yellow and size = small) or
+%%   d. small-yellow+adult-stretch.data  Inflated is true if 
+%%            (color=yellow and size = small) or (age=adult and act=stretch)
+%% 
+%%5. Number of attributes: 4
+%%
+%%6. Number of Instances: 16
+%%
+%%7. Attribute Information: (Classes Inflated T or F)
+%%   Color             yellow, purple
+%%   size              large, small
+%%   act               stretch, dip
+%%   age               adult, child
+%%   inflated          T, F
+%%
+%%8. Missing Values: None
+
+@relation balloons-yellow-small+adult-stretch
+
+@attribute V1 {PURPLE,YELLOW}
+@attribute V2 {LARGE,SMALL}
+@attribute V3 {DIP,STRETCH}
+@attribute V4 {ADULT,CHILD}
+@attribute Class {1,2}
+
 @data
-'2','2','2','1','2'
-'2','2','2','2','2'
-'2','2','1','1','2'
-'2','2','1','2','2'
-'2','1','2','1','2'
-'2','1','2','2','1'
-'2','1','1','1','1'
-'2','1','1','2','1'
-'1','2','2','1','2'
-'1','2','2','2','1'
-'1','2','1','1','1'
-'1','2','1','2','1'
-'1','1','2','1','2'
-'1','1','2','2','1'
-'1','1','1','1','1'
-'1','1','1','2','1'
+YELLOW,SMALL,STRETCH,ADULT,2
+YELLOW,SMALL,STRETCH,CHILD,2
+YELLOW,SMALL,DIP,ADULT,2
+YELLOW,SMALL,DIP,CHILD,2
+YELLOW,LARGE,STRETCH,ADULT,2
+YELLOW,LARGE,STRETCH,CHILD,1
+YELLOW,LARGE,DIP,ADULT,1
+YELLOW,LARGE,DIP,CHILD,1
+PURPLE,SMALL,STRETCH,ADULT,2
+PURPLE,SMALL,STRETCH,CHILD,1
+PURPLE,SMALL,DIP,ADULT,1
+PURPLE,SMALL,DIP,CHILD,1
+PURPLE,LARGE,STRETCH,ADULT,2
+PURPLE,LARGE,STRETCH,CHILD,1
+PURPLE,LARGE,DIP,ADULT,1
+PURPLE,LARGE,DIP,CHILD,1
