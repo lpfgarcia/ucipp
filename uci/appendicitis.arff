@@ -1,15 +1,16 @@
-%%Appendicitis data set
-%%
-%%1: Description.
-%%
-%%A copy of the data set proposed in: S. M. Weiss, and C. A. Kulikowski, Computer Systems That Learn (1991).
-%%
-%%2: Type.			Classification	
-%%3: Origin.			Real world
-%%4: Instances.			106
-%%5: Features.			9
-%%6: Classes.			2	
-%%7: Missing values.	No
+%%  Appendicitis data set
+%%  
+%%  1: Description.
+%%  
+%%  A copy of the data set proposed in: S. M. Weiss, and C. A. Kulikowski, 
+%%  Computer Systems That Learn (1991).
+%%  
+%%  2: Type.			Classification	
+%%  3: Origin.			Real world
+%%  4: Instances.			106
+%%  5: Features.			9
+%%  6: Classes.			2	
+%%  7: Missing values.	No
 
 @relation appendicitis
 
