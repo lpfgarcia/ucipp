@@ -1,4 +1,4 @@
-@relation data-weka.filters.unsupervised.attribute.ReplaceMissingValues
+@relation R_data_frame
 
 @attribute V1 numeric
 @attribute V2 numeric
