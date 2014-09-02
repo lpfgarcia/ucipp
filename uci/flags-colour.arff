@@ -1,0 +1,299 @@
+%%  1. TItle: Flag database
+%%  
+%%  2. Source Information
+%%     -- Creators: Collected primarily from the "Collins Gem Guide to Flags":
+%%        Collins Publishers (1986).
+%%     -- Donor: Richard S. Forsyth 
+%%               8 Grosvenor Avenue
+%%               Mapperley Park
+%%               Nottingham NG3 5DX
+%%               0602-621676
+%%     -- Date: 5/15/1990
+%%  
+%%  3. Past Usage:
+%%     -- None known other than what is shown in Forsyth's PC/BEAGLE User's Guide.
+%%  
+%%  4. Relevant Information:
+%%     -- This data file contains details of various nations and their flags.
+%%        In this file the fields are separated by spaces (not commas).  With
+%%        this data you can try things like predicting the religion of a country
+%%        from its size and the colours in its flag.  
+%%     -- 10 attributes are numeric-valued.  The remainder are either Boolean-
+%%        or nominal-valued.
+%%  
+%%  5. Number of Instances: 194
+%%  
+%%  6. Number of attributes: 30 (overall)
+%%  
+%%  7. Attribute Information:
+%%     1. name  Name of the country concerned
+%%     2. landmass  1=N.America, 2=S.America, 3=Europe, 4=Africa, 4=Asia, 6=Oceania
+%%     3. zone  Geographic quadrant, based on Greenwich and the Equator
+%%                  1=NE, 2=SE, 3=SW, 4=NW
+%%     4. area  in thousands of square km
+%%     5. population    in round millions
+%%     6. language 1=English, 2=Spanish, 3=French, 4=German, 5=Slavic, 6=Other 
+%%                 Indo-European, 7=Chinese, 8=Arabic, 
+%%                 9=Japanese/Turkish/Finnish/Magyar, 10=Others
+%%     7. religion 0=Catholic, 1=Other Christian, 2=Muslim, 3=Buddhist, 4=Hindu,
+%%                 5=Ethnic, 6=Marxist, 7=Others
+%%     8. bars     Number of vertical bars in the flag
+%%     9. stripes  Number of horizontal stripes in the flag
+%%    10. colours  Number of different colours in the flag
+%%    11. red      0 if red absent, 1 if red present in the flag
+%%    12. green    same for green
+%%    13. blue     same for blue
+%%    14. gold     same for gold (also yellow)
+%%    15. white    same for white
+%%    16. black    same for black
+%%    17. orange   same for orange (also brown)
+%%    18. mainhue  predominant colour in the flag (tie-breaks decided by taking
+%%                 the topmost hue, if that fails then the most central hue,
+%%                 and if that fails the leftmost hue)
+%%    19. circles  Number of circles in the flag
+%%    20. crosses  Number of (upright) crosses
+%%    21. saltires Number of diagonal crosses
+%%    22. quarters Number of quartered sections
+%%    23. sunstars Number of sun or star symbols
+%%    24. crescent 1 if a crescent moon symbol present, else 0
+%%    25. triangle 1 if any triangles present, 0 otherwise
+%%    26. icon     1 if an inanimate image present (e.g., a boat), otherwise 0
+%%    27. animate  1 if an animate image (e.g., an eagle, a tree, a human hand)
+%%                 present, 0 otherwise
+%%    28. text     1 if any letters or writing on the flag (e.g., a motto or
+%%                 slogan), 0 otherwise
+%%    29. topleft  colour in the top-left corner (moving right to decide 
+%%                 tie-breaks)
+%%    30. botright Colour in the bottom-left corner (moving left to decide 
+%%                 tie-breaks)
+%%  
+%%  8. Missing values: None
+
+@relation flags-colour
+
+@attribute V1 {Afghanistan,Albania,Algeria,American-Samoa,Andorra,Angola,Anguilla,Antigua-Barbuda,Argentina,Argentine,Australia,Austria,Bahamas,Bahrain,Bangladesh,Barbados,Belgium,Belize,Benin,Bermuda,Bhutan,Bolivia,Botswana,Brazil,British-Virgin-Isles,Brunei,Bulgaria,Burkina,Burma,Burundi,Cameroon,Canada,Cape-Verde-Islands,Cayman-Islands,Central-African-Republic,Chad,Chile,China,Colombia,Comorro-Islands,Congo,Cook-Islands,Costa-Rica,Cuba,Cyprus,Czechoslovakia,Denmark,Djibouti,Dominica,Dominican-Republic,Ecuador,Egypt,El-Salvador,Equatorial-Guinea,Ethiopia,Faeroes,Falklands-Malvinas,Fiji,Finland,France,French-Guiana,French-Polynesia,Gabon,Gambia,Germany-DDR,Germany-FRG,Ghana,Gibraltar,Greece,Greenland,Grenada,Guam,Guatemala,Guinea,Guinea-Bissau,Guyana,Haiti,Honduras,Hong-Kong,Hungary,Iceland,India,Indonesia,Iran,Iraq,Ireland,Israel,Italy,Ivory-Coast,Jamaica,Japan,Jordan,Kampuchea,Kenya,Kiribati,Kuwait,Laos,Lebanon,Lesotho,Liberia,Libya,Liechtenstein,Luxembourg,Malagasy,Malawi,Malaysia,Maldive-Islands,Mali,Malta,Marianas,Mauritania,Mauritius,Mexico,Micronesia,Monaco,Mongolia,Montserrat,Morocco,Mozambique,Nauru,Nepal,Netherlands,Netherlands-Antilles,New-Zealand,Nicaragua,Niger,Nigeria,Niue,North-Korea,North-Yemen,Norway,Oman,Pakistan,Panama,Papua-New-Guinea,Parguay,Peru,Philippines,Poland,Portugal,Puerto-Rico,Qatar,Romania,Rwanda,San-Marino,Sao-Tome,Saudi-Arabia,Senegal,Seychelles,Sierra-Leone,Singapore,Soloman-Islands,Somalia,South-Africa,South-Korea,South-Yemen,Spain,Sri-Lanka,St-Helena,St-Kitts-Nevis,St-Lucia,St-Vincent,Sudan,Surinam,Swaziland,Sweden,Switzerland,Syria,Taiwan,Tanzania,Thailand,Togo,Tonga,Trinidad-Tobago,Tunisia,Turkey,Turks-Cocos-Islands,Tuvalu,UAE,Uganda,UK,Uruguay,USA,USSR,US-Virgin-Isles,Vanuatu,Vatican-City,Venezuela,Vietnam,Western-Samoa,Yugoslavia,Zaire,Zambia,Zimbabwe}
+@attribute V2 numeric
+@attribute V3 numeric
+@attribute V4 numeric
+@attribute V5 numeric
+@attribute V6 numeric
+@attribute V7 numeric
+@attribute V8 numeric
+@attribute V9 numeric
+@attribute V10 numeric
+@attribute V11 numeric
+@attribute V12 numeric
+@attribute V13 numeric
+@attribute V14 numeric
+@attribute V15 numeric
+@attribute V16 numeric
+@attribute V17 numeric
+@attribute V18 {black,blue,brown,gold,green,orange,red,white}
+@attribute V19 numeric
+@attribute V20 numeric
+@attribute V21 numeric
+@attribute V22 numeric
+@attribute V23 numeric
+@attribute V24 numeric
+@attribute V25 numeric
+@attribute V26 numeric
+@attribute V27 numeric
+@attribute V28 numeric
+@attribute V29 {black,blue,gold,green,orange,red,white}
+@attribute Class {1,2,3,4,5,6,7,8}
+
+@data
+Afghanistan,5,1,648,16,10,2,0,3,5,1,1,0,1,1,1,0,green,0,0,0,0,1,0,0,1,0,0,black,5
+Albania,3,1,29,3,6,6,0,0,3,1,0,0,1,0,1,0,red,0,0,0,0,1,0,0,0,1,0,red,7
+Algeria,4,1,2388,20,8,2,2,0,3,1,1,0,0,1,0,0,green,0,0,0,0,1,1,0,0,0,0,green,8
+American-Samoa,6,3,0,0,1,1,0,0,5,1,0,1,1,1,0,1,blue,0,0,0,0,0,0,1,1,1,0,blue,7
+Andorra,3,1,0,0,6,0,3,0,3,1,0,1,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,blue,7
+Angola,4,2,1247,7,10,5,0,2,3,1,0,0,1,0,1,0,red,0,0,0,0,1,0,0,1,0,0,red,1
+Anguilla,1,4,0,0,1,1,0,1,3,0,0,1,0,1,0,1,white,0,0,0,0,0,0,0,0,1,0,white,2
+Antigua-Barbuda,1,4,0,0,1,1,0,1,5,1,0,1,1,1,1,0,red,0,0,0,0,1,0,1,0,0,0,black,7
+Argentina,2,3,2777,28,2,0,0,3,2,0,0,1,0,1,0,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Argentine,2,3,2777,28,2,0,0,3,3,0,0,1,1,1,0,0,blue,0,0,0,0,1,0,0,0,0,0,blue,2
+Australia,6,2,7690,15,1,1,0,0,3,1,0,1,0,1,0,0,blue,0,1,1,1,6,0,0,0,0,0,white,2
+Austria,3,1,84,8,4,0,0,3,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,7
+Bahamas,1,4,19,0,1,1,0,3,3,0,0,1,1,0,1,0,blue,0,0,0,0,0,0,1,0,0,0,blue,2
+Bahrain,5,1,1,0,8,2,0,0,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,white,7
+Bangladesh,5,1,143,90,6,2,0,0,2,1,1,0,0,0,0,0,green,1,0,0,0,0,0,0,0,0,0,green,5
+Barbados,1,4,0,0,1,1,3,0,3,0,0,1,1,0,1,0,blue,0,0,0,0,0,0,0,1,0,0,blue,2
+Belgium,3,1,31,10,6,0,3,0,3,1,0,0,1,0,1,0,gold,0,0,0,0,0,0,0,0,0,0,black,7
+Belize,1,4,23,0,1,1,0,2,8,1,1,1,1,1,1,1,blue,1,0,0,0,0,0,0,1,1,1,red,7
+Benin,4,1,113,3,3,5,0,0,2,1,1,0,0,0,0,0,green,0,0,0,0,1,0,0,0,0,0,green,5
+Bermuda,1,4,0,0,1,1,0,0,6,1,1,1,1,1,1,0,red,1,1,1,1,0,0,0,1,1,0,white,7
+Bhutan,5,1,47,1,10,3,0,0,4,1,0,0,0,1,1,1,orange,4,0,0,0,0,0,0,0,1,0,orange,7
+Bolivia,2,3,1099,6,2,0,0,3,3,1,1,0,1,0,0,0,red,0,0,0,0,0,0,0,0,0,0,red,5
+Botswana,4,2,600,1,10,5,0,5,3,0,0,1,0,1,1,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Brazil,2,3,8512,119,6,0,0,0,4,0,1,1,1,1,0,0,green,1,0,0,0,22,0,0,0,0,1,green,5
+British-Virgin-Isles,1,4,0,0,1,1,0,0,6,1,1,1,1,1,0,1,blue,0,1,1,1,0,0,0,1,1,1,white,2
+Brunei,5,1,6,0,10,2,0,0,4,1,0,0,1,1,1,0,gold,0,0,0,0,0,0,1,1,1,1,white,4
+Bulgaria,3,1,111,9,5,6,0,3,5,1,1,1,1,1,0,0,red,0,0,0,0,1,0,0,1,1,0,white,7
+Burkina,4,4,274,7,3,5,0,2,3,1,1,0,1,0,0,0,red,0,0,0,0,1,0,0,0,0,0,red,5
+Burma,5,1,678,35,10,3,0,0,3,1,0,1,0,1,0,0,red,0,0,0,1,14,0,0,1,1,0,blue,7
+Burundi,4,2,28,4,10,5,0,0,3,1,1,0,0,1,0,0,red,1,0,1,0,3,0,0,0,0,0,white,8
+Cameroon,4,1,474,8,3,1,3,0,3,1,1,0,1,0,0,0,gold,0,0,0,0,1,0,0,0,0,0,green,4
+Canada,1,4,9976,24,1,1,2,0,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,1,0,red,7
+Cape-Verde-Islands,4,4,4,0,6,0,1,2,5,1,1,0,1,0,1,1,gold,0,0,0,0,1,0,0,0,1,0,red,5
+Cayman-Islands,1,4,0,0,1,1,0,0,6,1,1,1,1,1,0,1,blue,1,1,1,1,4,0,0,1,1,1,white,2
+Central-African-Republic,4,1,623,2,10,5,1,0,5,1,1,1,1,1,0,0,gold,0,0,0,0,1,0,0,0,0,0,blue,4
+Chad,4,1,1284,4,3,5,3,0,3,1,0,1,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,blue,7
+Chile,2,3,757,11,2,0,0,2,3,1,0,1,0,1,0,0,red,0,0,0,1,1,0,0,0,0,0,blue,7
+China,5,1,9561,1008,7,6,0,0,2,1,0,0,1,0,0,0,red,0,0,0,0,5,0,0,0,0,0,red,7
+Colombia,2,4,1139,28,2,0,0,3,3,1,0,1,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,gold,7
+Comorro-Islands,4,2,2,0,3,2,0,0,2,0,1,0,0,1,0,0,green,0,0,0,0,4,1,0,0,0,0,green,5
+Congo,4,2,342,2,10,5,0,0,3,1,1,0,1,0,0,0,red,0,0,0,0,1,0,0,1,1,0,red,7
+Cook-Islands,6,3,0,0,1,1,0,0,4,1,0,1,0,1,0,0,blue,1,1,1,1,15,0,0,0,0,0,white,2
+Costa-Rica,1,4,51,2,2,0,0,5,3,1,0,1,0,1,0,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Cuba,1,4,115,10,2,6,0,5,3,1,0,1,0,1,0,0,blue,0,0,0,0,1,0,1,0,0,0,blue,2
+Cyprus,3,1,9,1,6,1,0,0,3,0,1,0,1,1,0,0,white,0,0,0,0,0,0,0,1,1,0,white,8
+Czechoslovakia,3,1,128,15,5,6,0,0,3,1,0,1,0,1,0,0,white,0,0,0,0,0,0,1,0,0,0,white,7
+Denmark,3,1,43,5,6,1,0,0,2,1,0,0,0,1,0,0,red,0,1,0,0,0,0,0,0,0,0,red,7
+Djibouti,4,1,22,0,3,2,0,0,4,1,1,1,0,1,0,0,blue,0,0,0,0,1,0,1,0,0,0,white,5
+Dominica,1,4,0,0,1,1,0,0,6,1,1,1,1,1,1,0,green,1,0,0,0,10,0,0,0,1,0,green,5
+Dominican-Republic,1,4,49,6,2,0,0,0,3,1,0,1,0,1,0,0,blue,0,1,0,0,0,0,0,0,0,0,blue,2
+Ecuador,2,3,284,8,2,0,0,3,3,1,0,1,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,gold,7
+Egypt,4,1,1001,47,8,2,0,3,4,1,0,0,1,1,1,0,black,0,0,0,0,0,0,0,0,1,1,red,1
+El-Salvador,1,4,21,5,2,0,0,3,2,0,0,1,0,1,0,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Equatorial-Guinea,4,1,28,0,10,5,0,3,4,1,1,1,0,1,0,0,green,0,0,0,0,0,0,1,0,0,0,green,7
+Ethiopia,4,1,1222,31,10,1,0,3,3,1,1,0,1,0,0,0,green,0,0,0,0,0,0,0,0,0,0,green,7
+Faeroes,3,4,1,0,6,1,0,0,3,1,0,1,0,1,0,0,white,0,1,0,0,0,0,0,0,0,0,white,8
+Falklands-Malvinas,2,3,12,0,1,1,0,0,6,1,1,1,1,1,0,0,blue,1,1,1,1,0,0,0,1,1,1,white,2
+Fiji,6,2,18,1,1,1,0,0,7,1,1,1,1,1,0,1,blue,0,2,1,1,0,0,0,1,1,0,white,2
+Finland,3,1,337,5,9,1,0,0,2,0,0,1,0,1,0,0,white,0,1,0,0,0,0,0,0,0,0,white,8
+France,3,1,547,54,3,0,3,0,3,1,0,1,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,blue,7
+French-Guiana,2,4,91,0,3,0,3,0,3,1,0,1,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,blue,7
+French-Polynesia,6,3,4,0,3,0,0,3,5,1,0,1,1,1,1,0,red,1,0,0,0,1,0,0,1,0,0,red,7
+Gabon,4,2,268,1,10,5,0,3,3,0,1,1,1,0,0,0,green,0,0,0,0,0,0,0,0,0,0,green,2
+Gambia,4,4,10,1,1,5,0,5,4,1,1,1,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,5
+Germany-DDR,3,1,108,17,4,6,0,3,3,1,0,0,1,0,1,0,gold,0,0,0,0,0,0,0,1,0,0,black,4
+Germany-FRG,3,1,249,61,4,1,0,3,3,1,0,0,1,0,1,0,black,0,0,0,0,0,0,0,0,0,0,black,4
+Ghana,4,4,239,14,1,5,0,3,4,1,1,0,1,0,1,0,red,0,0,0,0,1,0,0,0,0,0,red,5
+Gibraltar,3,4,0,0,1,1,0,1,3,1,0,0,1,1,0,0,white,0,0,0,0,0,0,0,1,0,0,white,7
+Greece,3,1,132,10,6,1,0,9,2,0,0,1,0,1,0,0,blue,0,1,0,1,0,0,0,0,0,0,blue,2
+Greenland,1,4,2176,0,6,1,0,0,2,1,0,0,0,1,0,0,white,1,0,0,0,0,0,0,0,0,0,white,7
+Grenada,1,4,0,0,1,1,0,0,3,1,1,0,1,0,0,0,gold,1,0,0,0,7,0,1,0,1,0,red,7
+Guam,6,1,0,0,1,1,0,0,7,1,1,1,1,1,0,1,blue,0,0,0,0,0,0,0,1,1,1,red,7
+Guatemala,1,4,109,8,2,0,3,0,2,0,0,1,0,1,0,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Guinea,4,4,246,6,3,2,3,0,3,1,1,0,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,red,5
+Guinea-Bissau,4,4,36,1,6,5,1,2,4,1,1,0,1,0,1,0,gold,0,0,0,0,1,0,0,0,0,0,red,5
+Guyana,2,4,215,1,1,4,0,0,5,1,1,0,1,1,1,0,green,0,0,0,0,0,0,1,0,0,0,black,5
+Haiti,1,4,28,6,3,0,2,0,2,1,0,0,0,0,1,0,black,0,0,0,0,0,0,0,0,0,0,black,7
+Honduras,1,4,112,4,2,0,0,3,2,0,0,1,0,1,0,0,blue,0,0,0,0,5,0,0,0,0,0,blue,2
+Hong-Kong,5,1,1,5,7,3,0,0,6,1,1,1,1,1,0,1,blue,1,1,1,1,0,0,0,1,1,1,white,2
+Hungary,3,1,93,11,9,6,0,3,3,1,1,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,5
+Iceland,3,4,103,0,6,1,0,0,3,1,0,1,0,1,0,0,blue,0,1,0,0,0,0,0,0,0,0,blue,2
+India,5,1,3268,684,6,4,0,3,4,0,1,1,0,1,0,1,orange,1,0,0,0,0,0,0,1,0,0,orange,5
+Indonesia,6,2,1904,157,10,2,0,2,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,8
+Iran,5,1,1648,39,6,2,0,3,3,1,1,0,0,1,0,0,red,0,0,0,0,0,0,0,1,0,1,green,7
+Iraq,5,1,435,14,8,2,0,3,4,1,1,0,0,1,1,0,red,0,0,0,0,3,0,0,0,0,0,red,1
+Ireland,3,4,70,3,1,0,3,0,3,0,1,0,0,1,0,1,white,0,0,0,0,0,0,0,0,0,0,green,6
+Israel,5,1,21,4,10,7,0,2,2,0,0,1,0,1,0,0,white,0,0,0,0,1,0,0,0,0,0,blue,2
+Italy,3,1,301,57,6,0,3,0,3,1,1,0,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,green,7
+Ivory-Coast,4,4,323,7,3,5,3,0,3,1,1,0,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,red,5
+Jamaica,1,4,11,2,1,1,0,0,3,0,1,0,1,0,1,0,green,0,0,1,0,0,0,1,0,0,0,gold,4
+Japan,5,1,372,118,9,7,0,0,2,1,0,0,0,1,0,0,white,1,0,0,0,1,0,0,0,0,0,white,8
+Jordan,5,1,98,2,8,2,0,3,4,1,1,0,0,1,1,0,black,0,0,0,0,1,0,1,0,0,0,black,5
+Kampuchea,5,1,181,6,10,3,0,0,2,1,0,0,1,0,0,0,red,0,0,0,0,0,0,0,1,0,0,red,7
+Kenya,4,1,583,17,10,5,0,5,4,1,1,0,0,1,1,0,red,1,0,0,0,0,0,0,1,0,0,black,5
+Kiribati,6,1,0,0,1,1,0,0,4,1,0,1,1,1,0,0,red,0,0,0,0,1,0,0,1,1,0,red,2
+Kuwait,5,1,18,2,8,2,0,3,4,1,1,0,0,1,1,0,green,0,0,0,0,0,0,0,0,0,0,green,7
+Laos,5,1,236,3,10,6,0,3,3,1,0,1,0,1,0,0,red,1,0,0,0,0,0,0,0,0,0,red,7
+Lebanon,5,1,10,3,8,2,0,2,4,1,1,0,0,1,0,1,red,0,0,0,0,0,0,0,0,1,0,red,7
+Lesotho,4,2,30,1,10,5,2,0,4,1,1,1,0,1,0,0,blue,0,0,0,0,0,0,0,1,0,0,green,2
+Liberia,4,4,111,1,10,5,0,11,3,1,0,1,0,1,0,0,red,0,0,0,1,1,0,0,0,0,0,blue,7
+Libya,4,1,1760,3,8,2,0,0,1,0,1,0,0,0,0,0,green,0,0,0,0,0,0,0,0,0,0,green,5
+Liechtenstein,3,1,0,0,4,0,0,2,3,1,0,1,1,0,0,0,red,0,0,0,0,0,0,0,1,0,0,blue,7
+Luxembourg,3,1,3,0,4,0,0,3,3,1,0,1,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,2
+Malagasy,4,2,587,9,10,1,1,2,3,1,1,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,white,5
+Malawi,4,2,118,6,10,5,0,3,3,1,1,0,0,0,1,0,red,0,0,0,0,1,0,0,0,0,0,black,5
+Malaysia,5,1,333,13,10,2,0,14,4,1,0,1,1,1,0,0,red,0,0,0,1,1,1,0,0,0,0,blue,8
+Maldive-Islands,5,1,0,0,10,2,0,0,3,1,1,0,0,1,0,0,red,0,0,0,0,0,1,0,0,0,0,red,7
+Mali,4,4,1240,7,3,2,3,0,3,1,1,0,1,0,0,0,gold,0,0,0,0,0,0,0,0,0,0,green,7
+Malta,3,1,0,0,10,0,2,0,3,1,0,0,0,1,1,0,red,0,1,0,0,0,0,0,1,0,0,white,7
+Marianas,6,1,0,0,10,1,0,0,3,0,0,1,0,1,0,0,blue,0,0,0,0,1,0,0,1,0,0,blue,2
+Mauritania,4,4,1031,2,8,2,0,0,2,0,1,0,1,0,0,0,green,0,0,0,0,1,1,0,0,0,0,green,5
+Mauritius,4,2,2,1,1,4,0,4,4,1,1,1,1,0,0,0,red,0,0,0,0,0,0,0,0,0,0,red,5
+Mexico,1,4,1973,77,2,0,3,0,4,1,1,0,0,1,0,1,green,0,0,0,0,0,0,0,0,1,0,green,7
+Micronesia,6,1,1,0,10,1,0,0,2,0,0,1,0,1,0,0,blue,0,0,0,0,4,0,0,0,0,0,blue,2
+Monaco,3,1,0,0,3,0,0,2,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,8
+Mongolia,5,1,1566,2,10,6,3,0,3,1,0,1,1,0,0,0,red,2,0,0,0,1,1,1,1,0,0,red,7
+Montserrat,1,4,0,0,1,1,0,0,7,1,1,1,1,1,1,0,blue,0,2,1,1,0,0,0,1,1,0,white,2
+Morocco,4,4,447,20,8,2,0,0,2,1,1,0,0,0,0,0,red,0,0,0,0,1,0,0,0,0,0,red,7
+Mozambique,4,2,783,12,10,5,0,5,5,1,1,0,1,1,1,0,gold,0,0,0,0,1,0,1,1,0,0,green,4
+Nauru,6,2,0,0,10,1,0,3,3,0,0,1,1,1,0,0,blue,0,0,0,0,1,0,0,0,0,0,blue,2
+Nepal,5,1,140,16,10,4,0,0,3,0,0,1,0,1,0,1,brown,0,0,0,0,2,1,0,0,0,0,blue,2
+Netherlands,3,1,41,14,6,1,0,3,3,1,0,1,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,2
+Netherlands-Antilles,1,4,0,0,6,1,0,1,3,1,0,1,0,1,0,0,white,0,0,0,0,6,0,0,0,0,0,white,8
+New-Zealand,6,2,268,2,1,1,0,0,3,1,0,1,0,1,0,0,blue,0,1,1,1,4,0,0,0,0,0,white,2
+Nicaragua,1,4,128,3,2,0,0,3,2,0,0,1,0,1,0,0,blue,0,0,0,0,0,0,0,0,0,0,blue,2
+Niger,4,1,1267,5,3,2,0,3,3,0,1,0,0,1,0,1,orange,1,0,0,0,0,0,0,0,0,0,orange,5
+Nigeria,4,1,925,56,10,2,3,0,2,0,1,0,0,1,0,0,green,0,0,0,0,0,0,0,0,0,0,green,5
+Niue,6,3,0,0,1,1,0,0,4,1,0,1,1,1,0,0,gold,1,1,1,1,5,0,0,0,0,0,white,4
+North-Korea,5,1,121,18,10,6,0,5,3,1,0,1,0,1,0,0,blue,1,0,0,0,1,0,0,0,0,0,blue,2
+North-Yemen,5,1,195,9,8,2,0,3,4,1,1,0,0,1,1,0,red,0,0,0,0,1,0,0,0,0,0,red,1
+Norway,3,1,324,4,6,1,0,0,3,1,0,1,0,1,0,0,red,0,1,0,0,0,0,0,0,0,0,red,7
+Oman,5,1,212,1,8,2,0,2,3,1,1,0,0,1,0,0,red,0,0,0,0,0,0,0,1,0,0,red,5
+Pakistan,5,1,804,84,6,2,1,0,2,0,1,0,0,1,0,0,green,0,0,0,0,1,1,0,0,0,0,white,5
+Panama,2,4,76,2,2,0,0,0,3,1,0,1,0,1,0,0,red,0,0,0,4,2,0,0,0,0,0,white,8
+Papua-New-Guinea,6,2,463,3,1,5,0,0,4,1,0,0,1,1,1,0,black,0,0,0,0,5,0,1,0,1,0,red,1
+Parguay,2,3,407,3,2,0,0,3,6,1,1,1,1,1,1,0,red,1,0,0,0,1,0,0,1,1,1,red,2
+Peru,2,3,1285,14,2,0,3,0,2,1,0,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,7
+Philippines,6,1,300,48,10,0,0,0,4,1,0,1,1,1,0,0,blue,0,0,0,0,4,0,1,0,0,0,blue,7
+Poland,3,1,313,36,5,6,0,2,2,1,0,0,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,white,7
+Portugal,3,4,92,10,6,0,0,0,5,1,1,1,1,1,0,0,red,1,0,0,0,0,0,0,1,0,0,green,7
+Puerto-Rico,1,4,9,3,2,0,0,5,3,1,0,1,0,1,0,0,red,0,0,0,0,1,0,1,0,0,0,red,7
+Qatar,5,1,11,0,8,2,0,0,2,0,0,0,0,1,0,1,brown,0,0,0,0,0,0,0,0,0,0,white,3
+Romania,3,1,237,22,6,6,3,0,7,1,1,1,1,1,0,1,red,0,0,0,0,2,0,0,1,1,1,blue,7
+Rwanda,4,2,26,5,10,5,3,0,4,1,1,0,1,0,1,0,red,0,0,0,0,0,0,0,0,0,1,red,5
+San-Marino,3,1,0,0,6,0,0,2,2,0,0,1,0,1,0,0,white,0,0,0,0,0,0,0,0,0,0,white,2
+Sao-Tome,4,1,0,0,6,0,0,3,4,1,1,0,1,0,1,0,green,0,0,0,0,2,0,1,0,0,0,green,5
+Saudi-Arabia,5,1,2150,9,8,2,0,0,2,0,1,0,0,1,0,0,green,0,0,0,0,0,0,0,1,0,1,green,5
+Senegal,4,4,196,6,3,2,3,0,3,1,1,0,1,0,0,0,green,0,0,0,0,1,0,0,0,0,0,green,7
+Seychelles,4,2,0,0,1,1,0,0,3,1,1,0,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,5
+Sierra-Leone,4,4,72,3,1,5,0,3,3,0,1,1,0,1,0,0,green,0,0,0,0,0,0,0,0,0,0,green,2
+Singapore,5,1,1,3,7,3,0,2,2,1,0,0,0,1,0,0,white,0,0,0,0,5,1,0,0,0,0,red,8
+Soloman-Islands,6,2,30,0,1,1,0,0,4,0,1,1,1,1,0,0,green,0,0,0,0,5,0,1,0,0,0,blue,5
+Somalia,4,1,637,5,10,2,0,0,2,0,0,1,0,1,0,0,blue,0,0,0,0,1,0,0,0,0,0,blue,2
+South-Africa,4,2,1221,29,6,1,0,3,5,1,1,1,0,1,0,1,orange,0,1,1,0,0,0,0,0,0,0,orange,2
+South-Korea,5,1,99,39,10,7,0,0,4,1,0,1,0,1,1,0,white,1,0,0,0,0,0,0,1,0,0,white,8
+South-Yemen,5,1,288,2,8,2,0,3,4,1,0,1,0,1,1,0,red,0,0,0,0,1,0,1,0,0,0,red,1
+Spain,3,4,505,38,2,0,0,3,2,1,0,0,1,0,0,0,red,0,0,0,0,0,0,0,0,0,0,red,7
+Sri-Lanka,5,1,66,15,10,3,2,0,4,0,1,0,1,0,0,1,gold,0,0,0,0,0,0,0,1,1,0,gold,4
+St-Helena,4,3,0,0,1,1,0,0,7,1,1,1,1,1,0,1,blue,0,1,1,1,0,0,0,1,0,0,white,2
+St-Kitts-Nevis,1,4,0,0,1,1,0,0,5,1,1,0,1,1,1,0,green,0,0,0,0,2,0,1,0,0,0,green,7
+St-Lucia,1,4,0,0,1,1,0,0,4,0,0,1,1,1,1,0,blue,0,0,0,0,0,0,1,0,0,0,blue,2
+St-Vincent,1,4,0,0,1,1,5,0,4,0,1,1,1,1,0,0,green,0,0,0,0,0,0,0,1,1,1,blue,5
+Sudan,4,1,2506,20,8,2,0,3,4,1,1,0,0,1,1,0,red,0,0,0,0,0,0,1,0,0,0,red,1
+Surinam,2,4,63,0,6,1,0,5,4,1,1,0,1,1,0,0,red,0,0,0,0,1,0,0,0,0,0,green,5
+Swaziland,4,2,17,1,10,1,0,5,7,1,0,1,1,1,1,1,blue,0,0,0,0,0,0,0,1,0,0,blue,2
+Sweden,3,1,450,8,6,1,0,0,2,0,0,1,1,0,0,0,blue,0,1,0,0,0,0,0,0,0,0,blue,2
+Switzerland,3,1,41,6,4,1,0,0,2,1,0,0,0,1,0,0,red,0,1,0,0,0,0,0,0,0,0,red,7
+Syria,5,1,185,10,8,2,0,3,4,1,1,0,0,1,1,0,red,0,0,0,0,2,0,0,0,0,0,red,1
+Taiwan,5,1,36,18,7,3,0,0,3,1,0,1,0,1,0,0,red,1,0,0,1,1,0,0,0,0,0,blue,7
+Tanzania,4,2,945,18,10,5,0,0,4,0,1,1,1,0,1,0,green,0,0,0,0,0,0,1,0,0,0,green,2
+Thailand,5,1,514,49,10,3,0,5,3,1,0,1,0,1,0,0,red,0,0,0,0,0,0,0,0,0,0,red,7
+Togo,4,1,57,2,3,7,0,5,4,1,1,0,1,1,0,0,green,0,0,0,1,1,0,0,0,0,0,red,5
+Tonga,6,2,1,0,10,1,0,0,2,1,0,0,0,1,0,0,red,0,1,0,1,0,0,0,0,0,0,white,7
+Trinidad-Tobago,2,4,5,1,1,1,0,0,3,1,0,0,0,1,1,0,red,0,0,0,0,0,0,1,0,0,0,white,8
+Tunisia,4,1,164,7,8,2,0,0,2,1,0,0,0,1,0,0,red,1,0,0,0,1,1,0,0,0,0,red,7
+Turkey,5,1,781,45,9,2,0,0,2,1,0,0,0,1,0,0,red,0,0,0,0,1,1,0,0,0,0,red,7
+Turks-Cocos-Islands,1,4,0,0,1,1,0,0,6,1,1,1,1,1,0,1,blue,0,1,1,1,0,0,0,1,1,0,white,2
+Tuvalu,6,2,0,0,1,1,0,0,5,1,0,1,1,1,0,0,blue,0,1,1,1,9,0,0,0,0,0,white,2
+UAE,5,1,84,1,8,2,1,3,4,1,1,0,0,1,1,0,green,0,0,0,0,0,0,0,0,0,0,red,1
+Uganda,4,1,236,13,10,5,0,6,5,1,0,0,1,1,1,0,gold,1,0,0,0,0,0,0,0,1,0,black,7
+UK,3,4,245,56,1,1,0,0,3,1,0,1,0,1,0,0,red,0,1,1,0,0,0,0,0,0,0,white,7
+Uruguay,2,3,178,3,2,0,0,9,3,0,0,1,1,1,0,0,white,0,0,0,1,1,0,0,0,0,0,white,8
+US-Virgin-Isles,1,4,0,0,1,1,0,0,6,1,1,1,1,1,0,0,white,0,0,0,0,0,0,0,1,1,1,white,8
+USA,1,4,9363,231,1,1,0,13,3,1,0,1,0,1,0,0,white,0,0,0,1,50,0,0,0,0,0,blue,7
+USSR,5,1,22402,274,5,6,0,0,2,1,0,0,1,0,0,0,red,0,0,0,0,1,0,0,1,0,0,red,7
+Vanuatu,6,2,15,0,6,1,0,0,4,1,1,0,1,0,1,0,red,0,0,0,0,0,0,1,0,1,0,black,5
+Vatican-City,3,1,0,0,6,0,2,0,4,1,0,0,1,1,1,0,gold,0,0,0,0,0,0,0,1,0,0,gold,8
+Venezuela,2,4,912,15,2,0,0,3,7,1,1,1,1,1,1,1,red,0,0,0,0,7,0,0,1,1,0,gold,7
+Vietnam,5,1,333,60,10,6,0,0,2,1,0,0,1,0,0,0,red,0,0,0,0,1,0,0,0,0,0,red,7
+Western-Samoa,6,3,3,0,1,1,0,0,3,1,0,1,0,1,0,0,red,0,0,0,1,5,0,0,0,0,0,blue,7
+Yugoslavia,3,1,256,22,6,6,0,3,4,1,0,1,1,1,0,0,red,0,0,0,0,1,0,0,0,0,0,blue,7
+Zaire,4,2,905,28,10,5,0,0,4,1,1,0,1,0,0,1,green,1,0,0,0,0,0,0,1,1,0,green,5
+Zambia,4,2,753,6,10,5,3,0,4,1,1,0,0,0,1,1,green,0,0,0,0,0,0,0,0,1,0,green,3
+Zimbabwe,4,2,391,8,10,5,0,7,5,1,1,0,1,1,1,0,green,0,0,0,0,1,0,1,1,1,0,green,5
